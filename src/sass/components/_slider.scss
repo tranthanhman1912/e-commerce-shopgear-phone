@@ -1,0 +1,13 @@
+.slider{
+    @include flex(flex-start,space-between);
+    &__left{
+        flex: 2;
+    }
+    &__right{
+        @include flex(center, center);
+        flex-direction: column;
+        flex: 1;
+        gap: 30px 0;
+
+    }
+}

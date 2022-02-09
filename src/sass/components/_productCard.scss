@@ -1,0 +1,32 @@
+.product {
+  &__card {
+    &__item {
+      a:hover {
+        color: unset;
+      }
+      border: 1px solid #ebe9e9;
+      padding: 20px;
+      transition: 0.3s ease;
+      &__img {
+        margin-bottom: 20px;
+      }
+      &__info {
+        &__name {
+          font-size: 1.3rem;
+          margin-bottom: 15px;
+        }
+        &__price {
+          margin-bottom: 15px;
+          del {
+            color: red;
+          }
+        }
+        &__rate {
+          color: #fb6e2e;
+          margin-bottom: 20px;
+        }
+      }
+      
+    }
+  }
+}

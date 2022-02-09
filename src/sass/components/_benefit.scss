@@ -1,0 +1,37 @@
+.benefit{
+    @include flex(flex-start,flex-start);
+    box-shadow: 0 8px 24px #4267b2;
+    color: #4267b2;
+    cursor: context-menu;
+    min-height: 100px;
+    padding: 20px 0;
+    transition: .3s ease;
+    &__icon{
+        font-size: 3rem;
+        margin: 0 20px;
+    }
+    &__info{
+        &__name{
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        @include flex(flex-start,center);
+        flex-direction: column;
+    }
+}
+.isHover{
+   position: relative;
+   top: -15px;
+   animation-duration: 0.3s ;
+   animation-name: slidein;
+}
+@keyframes slidein {
+    from {
+        position: relative;
+        top: 0;
+    }
+    to {
+        position: relative;
+        top: -15px;
+    }
+  }

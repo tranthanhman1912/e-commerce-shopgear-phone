@@ -1,0 +1,26 @@
+.section{
+    margin-top: 70px;
+    &__title{
+        font-size: 2rem;
+        padding-bottom: 10px;
+        pointer-events: none;
+        position: relative;
+        text-align: center;
+        text-transform: capitalize;
+       
+    }
+    &__body{
+        margin-top: 70px;
+    }
+    &__title:after {
+        background: #4267b2;
+        bottom: 0;
+        content: "";
+        height: 3px;
+        left: 50%;
+        position: absolute;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        width: 20%;
+    }
+}

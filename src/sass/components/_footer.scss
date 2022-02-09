@@ -1,0 +1,13 @@
+.footer{
+    &__title{
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        min-height: 30px;
+    }
+    &__content{
+        p{
+            margin-bottom: 15px;
+        }
+    }
+}

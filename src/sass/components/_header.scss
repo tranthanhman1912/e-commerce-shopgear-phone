@@ -1,0 +1,64 @@
+.container {
+  height: 100%;
+}
+.header {
+  position: fixed;
+  height: $header-height;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: height 0.3s ease;
+   &.shrink {
+    height: $header-shrink-height;
+    box-shadow: $box-shadow;
+    z-index: 100;
+    background: rgb(238, 245, 248);
+    @include mobile {
+      height: $header-mobile-height;
+    }
+  }
+  &__logo {
+    @include flex(center,center);
+    position: absolute;
+    width: 150px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    img{ 
+      width: 100%;
+    }
+    
+  }
+  &__menu {
+    @include flex(center, space-between);
+    height: 100%;
+
+    &__item {
+      font-size: 1.3rem;
+      margin: 0 10px;
+
+      a {
+        transition: 0.1s linear;
+      }
+    }
+    &__item.active {
+      font-weight: bold;
+      color: $main-color;
+    }
+    &__left {
+      @include flex(center, space-between);
+      &__item{
+        &:nth-child(1) {
+          margin-left:0;
+        }
+      }
+    }
+    &__right {
+      @include flex(center, space-around);
+    }
+  }
+}
