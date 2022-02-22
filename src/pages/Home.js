@@ -6,7 +6,7 @@ import Benefit from "../components/Benefit"
 import ProductCard from "../components/ProductCard";
 import Banner from "../components/Banner";
 //--------API-----------
-import benefitData from '../api/benefit';
+import policy from '../api/policy';
 import productData from '../api/product';
 function Home() {
  
@@ -16,7 +16,7 @@ function Home() {
       <Section>
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={30}>
-            {benefitData.map((item, index)=>(
+            {policy.map((item, index)=>(
               <Benefit 
                 key={index}
                 icon={item.icon}

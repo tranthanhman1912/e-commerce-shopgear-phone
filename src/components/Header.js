@@ -1,7 +1,10 @@
 import React, { useEffect, useRef } from "react";
 
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Logo from "../assets/images/logofull.png";
+import { useUserAuth } from "../context/UserAuthContext";
+
+import {auth} from "../firebase";
 const mainNav = [
   {
     display: "Trang chủ",
@@ -9,7 +12,7 @@ const mainNav = [
   },
   {
     display: "Sản phẩm",
-    path: "/catalog",
+    path: "/product",
   },
   {
     display: "Bài viết",
@@ -23,8 +26,17 @@ const mainNav = [
 
 const Header = () => {
   const { pathname } = useLocation();
+  const { user, logOut } = useUserAuth();
   const navActive = mainNav.findIndex((i) => i.path === pathname);
   const headerRef = useRef(null);
+  const navigate = useNavigate();
+  
+  const handleLogOut = async () => {
+    try {
+      await logOut();
+      navigate("/login");
+    } catch (error) {}
+  };
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (
@@ -67,11 +79,26 @@ const Header = () => {
                 <i className="bx bx-shopping-bag"></i>
               </Link>
             </div>
-            <div className="header__menu__item header__menu__right__user ">
-              <Link to="/login">
-                <i className="bx bx-user"></i>
-              </Link>
-            </div>
+            {user ? (
+              <div className="header__menu__item header__menu__right__user ">
+                <div className="header__menu__right__user__email">
+                  {user.email}
+                </div>
+                <div
+                  className="header__menu__right__user__logout"
+                  title="Đăng xuất"
+                  onClick={handleLogOut}
+                >
+                  <i className="bx bx-log-out"></i>
+                </div>
+              </div>
+            ) : (
+              <div className="header__menu__item header__menu__right__user ">
+                <Link to="/login">
+                  <i className="bx bx-user"></i>
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </div>

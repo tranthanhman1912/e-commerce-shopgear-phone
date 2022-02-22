@@ -1,0 +1,64 @@
+.cart {
+  @include flex(flex-start, flex-start);
+  gap: 30px;
+  &__left {
+    &__title {
+      padding: 30px 15px;
+      font-weight: 700;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+    width: 70%;
+    border: 1px solid #ccc;
+  }
+  &__right {
+    width: 30%;
+    &__info {
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      margin-right: 30px;
+      padding: 20px;
+      top: 90px;
+      &__txt {
+        font-size: 1.25rem;
+      }
+      &__price {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+      }
+      &__price {
+          margin-bottom: 20px;
+        div:nth-child(2) {
+          color: #4267b2;
+          font-size: 1.3rem;
+          font-weight: 600;
+        }
+      }
+      &__btn{
+       button{
+        border: 1px solid #222;
+        background-color: #222;
+        color: #fff;
+        padding: 20px 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+       }
+      }
+    }
+  }
+  &__item{
+    &__info{
+      &__del{
+        cursor: pointer;
+        i{
+          color: red;
+        }
+      }
+    }
+  }
+}
+.justify-flex-start {
+  justify-content: flex-start !important;
+}
