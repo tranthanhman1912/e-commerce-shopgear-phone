@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import {Link} from "react-router-dom";
 const ProductCard = (props) => {
   const { data } = props;
   const [hover, setHover] = useState(false);
@@ -15,7 +15,7 @@ const ProductCard = (props) => {
           setHover(false);
         }}
       >
-        <a href="/">
+        <Link to={`/product/${data.slug}`}>
           <div className="product__card__item__img">
             <img src={data.image.imgAvt} alt={data.name} />
           </div>
@@ -69,7 +69,7 @@ const ProductCard = (props) => {
               )}
             </div>
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );

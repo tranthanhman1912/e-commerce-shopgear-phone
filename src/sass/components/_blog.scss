@@ -1,0 +1,124 @@
+.blog {
+  @include flex(flex-start, space-between);
+  gap: 0 50px;
+  &__left {
+    width: 70%;
+  }
+  &__right {
+    width: 30%;
+
+    &__item {
+      border: 1px solid #dad7d7;
+      margin-bottom: 30px;
+      &__name {
+        text-align: center;
+        margin: 30px 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      &__img {
+        @include flex(center, flex-start);
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        img {
+          height: 100px;
+        }
+      }
+    }
+  }
+  &__list {
+    &__item {
+      border: 1px solid #dad7d7;
+      margin-bottom: 50px;
+      &__img {
+        margin-bottom: 20px;
+      }
+      &__info {
+        padding: 0 30px;
+        &__status {
+          background: #f7f6f6;
+          display: inline-block;
+          font-weight: 600;
+          margin-bottom: 30px;
+          padding: 5px;
+          &--news {
+            color: #f51e1e;
+          }
+          &--old {
+            color: blue;
+          }
+        }
+        &__title {
+          color: #2b2d42;
+          font-size: 1.4rem;
+          margin-bottom: 15px;
+        }
+        &__desc {
+          color: #8888a7;
+          font-size: 1rem;
+          line-height: 1.2rem;
+          margin-bottom: 40px;
+        }
+      }
+      &__footer {
+        padding: 0 30px;
+        @include flex(center, space-between);
+        margin-bottom: 20px;
+
+        &__author {
+          @include flex(center, center);
+          img {
+            border: 1px solid;
+            border-radius: 100rem;
+            height: 40px;
+            margin-right: 20px;
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+  &__recentPost {
+    padding: 0 20px;
+    &__item {
+      @include flex(flex-start, center);
+      gap: 0 20px;
+      margin-bottom: 20px;
+      &__img {
+        border-radius: 5px;
+        overflow: hidden;
+        width: 40%;
+      }
+      &__info {
+        h2 {
+          font-size: 1.3rem;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  &__tags {
+    &__item {
+      flex-wrap: wrap;
+      gap: 20px;
+      @include flex(center,flex-start);
+      margin-bottom: 20px;
+      padding: 0 20px;
+      span {
+        background: #f1f1f1;
+        border: 1px solid #cac7c7;
+        border-radius: 3px;
+        cursor: context-menu;
+        display: inline-block;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        padding: 8px;
+        transition: all 0.2s linear;
+      }
+      span:hover{
+          color: #f51e1e;
+      }
+    }
+  }
+}

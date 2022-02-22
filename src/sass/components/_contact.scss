@@ -1,0 +1,38 @@
+.contact{
+    &__title{
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    &__banner{
+       
+        background: #f3f2f2;
+  
+        gap: 0 50px;
+     
+        margin-bottom: 50px;
+        padding: 50px;
+        @include flex(center,center);
+        img{
+            height: 500px;
+        }
+    }
+    &__item{
+        @include flex(flex-start,flex-start);       
+        gap: 0 20px;
+        margin-bottom: 20px;
+        &__icon{
+            color: #fdb03d;
+    font-size: 2rem;
+        }
+        &__info{
+            &__title{
+                font-weight: 700;
+            }
+        }
+    }
+}
+.mb-1{
+    margin-bottom: 10px;
+}

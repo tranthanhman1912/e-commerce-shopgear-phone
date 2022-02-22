@@ -21,7 +21,7 @@ const policy = [
     },
   ];
   
-  export const policyProductView = [
+  export const policyProductDetail = [
     {
       id: "1",
       description:

@@ -1,0 +1,57 @@
+.product{
+    &__search{
+        border-bottom: 1px solid #4267b2;
+        display:inline-flex;
+        &__input{
+            border: none;
+            min-width: 230px;
+            outline: none;
+            padding: 5px 10px;
+        }
+        i{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+    }
+    &__filter{
+        margin: 30px;
+        text-align: center;
+        button{
+            background-color: transparent;
+            border: 1px solid #b4b0b0;
+            cursor: pointer;
+            font-size: 1.1rem;
+            letter-spacing: 1.5px;
+            margin-right: 20px;
+            outline: none;
+            padding: 5px 25px;
+        }
+        button:hover{
+            color: #4267b2;
+        }
+    }
+    &__content{
+        margin-bottom: 30px;
+    }
+    &__pagination{
+    
+        @include flex(center,center);
+        margin: 50px 0;
+        &__item{
+            padding: 5px 10px;
+            cursor: pointer;
+            border: 1px solid #4267b2;      
+            color: #4267b2;
+        }
+        &__control{
+            cursor: pointer;
+            margin: 0 20px;
+            i{
+                font-weight: 700;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

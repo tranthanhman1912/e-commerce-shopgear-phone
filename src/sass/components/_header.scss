@@ -59,6 +59,15 @@
     }
     &__right {
       @include flex(center, space-around);
+      &__user{
+        @include flex(center, flex-start);
+        &__email{
+          margin-right: 10px;
+        }
+        &__logout{
+          cursor: pointer;
+        }
+      }
     }
   }
 }

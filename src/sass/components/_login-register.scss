@@ -1,0 +1,44 @@
+.login,.register{
+    margin: 0 auto;
+    max-width: 30%;
+    padding: 30px;
+    margin-top: 200px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    &__title{
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .form{
+        &__group{
+            margin-bottom: 20px;
+            input{
+                font-size: 14px;
+                padding: 10px;
+                width: 100%;
+            }
+        }
+    }
+    &__submit{
+        border: 1px solid #222;;
+        background-color: #222;
+        color: #fff;
+        padding: 10px 20px;
+        width: 30%;
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 700;
+        cursor: pointer;
+        width: 100%;
+    }
+    &__submit:hover {
+        color:#e2dcdc;
+    }
+    &__register{
+       a{
+        text-decoration: underline;
+        color: blue;
+       }
+    }
+}

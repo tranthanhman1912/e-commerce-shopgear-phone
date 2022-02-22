@@ -1,0 +1,19 @@
+.system__product{
+    &__name{
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    &__list{
+        margin: 20px 0;
+        &__item{
+            @include flex(center,flex-start);
+            padding: 10px 15px;
+            &__left{
+                min-width: 150px;
+            }
+        }
+        &__item:nth-child(odd){
+            background-color: #f5f5f5;
+        }
+    }
+}
